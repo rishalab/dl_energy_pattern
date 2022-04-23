@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruning</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <script src="bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            Towards a catalog of energy patterns for deep learning development
+        </div>
+    </div>
+    <div class="content col-11 col-md-10 col-lg-9">
+        <a href="./index.html">Go Back</a>
+        <h1>Pruning</h1>
+        <p class="tagline">Prune large networks to reduce the impact of over-parameterization</p>
+        <div class="card">
+            <div class="card-header">
+                Description 
+            </div>
+            <div class="card-body">
+                <img class="pattern-img" 
+                    src="./pruning.png" alt="pruning image">
+                <!-- <h5 class="card-title">Apply transfer learning with pre-trained networks whenever feasible</h5> -->
+                <p class="card-text">
+                    <strong>Context:</strong> Over-parameterization or the presence of redundant parameters that do not contribute much to the output of the model is
+                    a common problem in deep neural networks, especially in architectures like CNN. 
+                    It is a widely believed reason for why a neural
+                    network may fit all training labels.
+                </p>
+                <p class="card-text">
+                    <strong>Problem:</strong> Over-parameterization can cause increase in size of the
+                    networks. More parameters can also increase the number of computation, 
+                    and memory accesses. The increased computational load can cause increased 
+                    power consumption.
+                </p>
+                <p class="card-text">
+                    <strong>Solution:</strong> Network pruning is a strategy involving the removal
+                    of non-critical or redundant neurons from the neural network to reduce its 
+                    size with minimal effect on the performance. Use of pruning on deep learning 
+                    models can be an effective strategy to improve energy efficiency as seen in some 
+                    of the existing work. The pruned model improves energy efficiency during inferencing by
+                    reducing the bandwidth and power requirements due to the reduced number of FLOPs (floating point operations). Due to reduced
+                    size, pruned models also reduce the memory requirements of the network.
+                </p>
+                <p class="card-text">
+                    <strong>Example:</strong> Consider an object detection model using an R-CNN
+                    model that has a high accuracy. But due to its large size that result in large number of computations, inferencing a single image
+                    takes a long time. The process also consumes higher energy due to the large number 
+                    of computations. Pruning the model appropriately would cut down the 
+                    redundant computations resulting in both faster inferencing and lesser energy consumption. The example is based on 
+                    <a href="https://stackoverflow.com/questions/63687033/">this</a> post. 
+                </p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="card">
+            <div class="card-header">
+                Related Stack Overflow Posts 
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><a href='https://stackoverflow.com/questions/57395645/'>https://stackoverflow.com/questions/57395645/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/66231467/'>https://stackoverflow.com/questions/66231467/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/52064450/'>https://stackoverflow.com/questions/52064450/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/36645799/'>https://stackoverflow.com/questions/36645799/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/41701783/'>https://stackoverflow.com/questions/41701783/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/57197914/'>https://stackoverflow.com/questions/57197914/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/66090385/'>https://stackoverflow.com/questions/66090385/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/66090385/'>https://stackoverflow.com/questions/66090385/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/67009335/'>https://stackoverflow.com/questions/67009335/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/67243218/'>https://stackoverflow.com/questions/67243218/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/54781966/'>https://stackoverflow.com/questions/54781966/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/63687033/'>https://stackoverflow.com/questions/63687033/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/57395645/'>https://stackoverflow.com/questions/57395645/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/41958566/'>https://stackoverflow.com/questions/41958566/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/66590044/'>https://stackoverflow.com/questions/66590044/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/58711222/'>https://stackoverflow.com/questions/58711222/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/56156646/'>https://stackoverflow.com/questions/56156646/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/56224426/'>https://stackoverflow.com/questions/56224426/</a><br></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="card">
+            <div class="card-header">Acknowledgements</div>
+            <div class="card-body">Image Source: <a
+                    href="https://blog.tensorflow.org/2019/05/tf-model-optimization-toolkit-pruning-API.html">
+                    Tensorflow Blog</a></div>
+    </div>
+</body>
+</html>

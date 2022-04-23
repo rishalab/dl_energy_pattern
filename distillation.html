@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distillation</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <script src="bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            Towards a catalog of energy patterns for deep learning development
+        </div>
+    </div>
+    <div class="content col-11 col-md-10 col-lg-9">
+        <a href="./index.html">Go Back</a>
+        <h1>Distillation</h1>
+        <p class="tagline">If pre-trained models are too large for a given task, apply knowledge 
+            distillation or use distilled versions of pre-trained models</p>
+        <div class="card">
+            <div class="card-header">
+                Description 
+            </div>
+            <div class="card-body">
+                <img class="pattern-img" 
+                    src="./distillation.png" alt="pruning image">
+                <!-- <h5 class="card-title">Apply transfer learning with pre-trained networks whenever feasible</h5> -->
+                <p class="card-text">
+                    <strong>Context:</strong>  Use of pretrained models can save the energy spent on
+                    training a new network from scratch. However, these models can sometimes be too 
+                    large for the given task and given power consumption and resource constraints.
+                </p>
+                <p class="card-text">
+                    <strong>Problem:</strong> Using pretrained models that are too large for a given
+                    task may cause excessive computations and memory access due to
+                    the number and size of model parameters. This leads to increased
+                    power consumption during fine tuning and inferencing.
+                </p>
+                <p class="card-text">
+                    <strong>Solution:</strong>  Knowledge distillation refers to the process of transferring 
+                    the knowledge from a larger model to a smaller one. 
+                    It involves training a smaller model called student to mimic a larger
+                    pre-trained model called teacher using an appropriate loss function.
+                    It solves the problem of expensive inferencing caused by larger
+                    pre-trained models.
+                </p>
+                <p class="card-text">
+                    <strong>Example:</strong>  Consider a classification task that needs to classify movie
+                    reviews. A pretrained model like BERT with some fine-tuning can
+                    be used without having to train the model from scratch. However,
+                    if a minor compromise in the accuracy can be tolerated, a distilled
+                    version of BERT model called DistilBERT can be used with some
+                    fine-tuning. Due to its smaller size, DistilBERT can be much
+                    more energy-efficient for fine-tuning and inferencing.
+                </p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="card">
+            <div class="card-header">
+                Related Stack Overflow Posts 
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><a href='https://stackoverflow.com/questions/44236449/'>https://stackoverflow.com/questions/44236449/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/63201036/'>https://stackoverflow.com/questions/63201036/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/68322542/'>https://stackoverflow.com/questions/68322542/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/68380183/'>https://stackoverflow.com/questions/68380183/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/61402903/'>https://stackoverflow.com/questions/61402903/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/68928299/'>https://stackoverflow.com/questions/68928299/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/60780181/'>https://stackoverflow.com/questions/60780181/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/61326892/'>https://stackoverflow.com/questions/61326892/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/60056812/'>https://stackoverflow.com/questions/60056812/</a><br></li>
+                    <li><a href='https://stackoverflow.com/questions/45194954/'>https://stackoverflow.com/questions/45194954/</a><br></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="card">
+            <div class="card-header">Acknowledgements</div>
+            <div class="card-body">Image Source: <a
+                    href="https://towardsdatascience.com/knowledge-distillation-simplified-dd4973dbc764">
+                    Knowledge Distillation : Simplified</a></div>
+    </div>
+</body>
+</html>
